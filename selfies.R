@@ -1,6 +1,5 @@
 library(dplyr)
 library(openxlsx)
-library(anytime)
 
 
 selfies <- read.xlsx(here::here("selfies.xlsx"))
@@ -10,3 +9,8 @@ selfies <- read.xlsx(here::here("selfies.xlsx"))
 
 x <- selfies %>% 
   mutate(time=anytime(AtTime))
+
+y <- x %>% 
+  select(PhotoNumber)
+
+##adding more
